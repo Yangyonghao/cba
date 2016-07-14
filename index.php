@@ -15,14 +15,17 @@ session_start();
 if(version_compare(PHP_VERSION,'5.3.0','<'))  die('require PHP > 5.3.0 !');
 
 // 开启调试模式 建议开发阶段开启 部署阶段注释或者设为false
-define('APP_DEBUG',True);
-
+//define('APP_DEBUG',True);
+//网站当前路径
+define('SITE_PATH', dirname(__FILE__)."/");
 //定义缓存存放路径
-define("RUNTIME_PATH", data . "data/runtime/");
+define("RUNTIME_PATH", "./runtime/");
 //静态缓存目录
 //define("HTML_PATH", SITE_PATH . "data/runtime/Html/");
+// 开启调试模式
 
 define('BIND_MODULE','Home');
+
 // 定义应用目录
 define('APP_PATH','./Application/');
 

@@ -7,9 +7,12 @@ class IndexController extends Controller {
     public function index(){
 
         if(!isset($_SESSION['user_name'])){
-            $this->redirect('public/login');
+
+            $this->display('Public/login');
+        }else{
+            $this->display();
+
         }
-        $this->display();
     }
 
 
